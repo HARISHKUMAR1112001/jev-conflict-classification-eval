@@ -252,7 +252,7 @@ For each configuration, we compute:
 | V3 | Detailed | No  | 0.651 | 0.540 | 0.660 |
 | V2 | Detailed | Yes | **0.653** | **0.559** | **0.660** |
 
-<!-- IMAGE PLACEHOLDER: Overall metric comparison bar chart (accuracy / macro-F1 / weighted-F1 per version) -->
+
 ![Overall metric comparison](figures/overall_comparison.png)
 
 Detailed label descriptions are the dominant lever, lifting accuracy from ~49–56% to ~65% regardless of whether examples are present (V3 ≈ V2, a 0.2-point difference likely within run-to-run noise — see Limitations). For reference, Cattan et al. (2025, Table 4) report zero-shot accuracy from 53.1% (Qwen 2.5 72B) to 65.3% (Gemini 2.5 Flash) on this same taxonomy. JEV's best configuration matches that ceiling, establishing that **JEV is a viable classifier for this task at the top end of currently reported performance** — but 65% still means roughly one in three predictions is wrong, which is the motivation for asking whether its confidence output can flag those errors.
@@ -267,7 +267,7 @@ Detailed label descriptions are the dominant lever, lifting accuracy from ~49–
 | `temporal`       | ~61  | 0.613 | 0.565 | 0.603 | 0.582 |
 | `misinformation` | ~4   | 0.077 | 0.095 | 0.091 | 0.200 |
 
-<!-- IMAGE PLACEHOLDER: Per-class F1 grouped bar chart (one group per class, one bar per version) -->
+
 ![Per-class F1 by version](figures/per_class_f1.png)
 
 To make the precision/recall trade-offs referenced below explicit, the two tables that follow give the full breakdown for the best (V2, detailed) and baseline (V5, simple) configurations. The contrast isolates what a detailed label description changes: it raises `no_conflict` recall (0.375 -> 0.725) and `complementary` precision (0.363 → 0.597) while trading away a little `opinion` precision (0.941 -> 0.881) for a large recall gain (0.281 → 0.518).
@@ -334,10 +334,10 @@ To test whether confidence separates correct from incorrect predictions, we also
 
 *Separation = mean confidence on correct predictions minus mean confidence on incorrect predictions. A larger positive value means confidence better discriminates right from wrong.*
 
-<!-- IMAGE PLACEHOLDER: Confidence distribution of false predictions across versions (overlaid step histogram) -->
+
 ![Confidence of false predictions](figures/confidence_overlay.png)
 
-<!-- IMAGE PLACEHOLDER: Confidence distribution — correct vs. incorrect predictions (calibration/reliability) -->
+
 ![Calibration: correct vs incorrect confidence](figures/calibration.png)
 
 Three findings stand out:
