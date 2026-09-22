@@ -374,6 +374,12 @@ JEV (`jev-1.13.0`) is viable for knowledge-conflict classification in RAG on the
 
 ---
 
+## 7. Code and Artifacts
+The source code, configuration files, and complete evaluation logs for this study can be accessed at:
+[https://github.com/HARISHKUMAR1112001/jev-conflict-classification-eval](https://github.com/HARISHKUMAR1112001/jev-conflict-classification-eval)
+
+---
+
 ## References
 
 Cattan, A., Jacovi, A., Ram, O., Herzig, J., Aharoni, R., Goldshtein, S., Ofek, E., Szpektor, I., & Caciularu, A. (2025). *DRAGged into CONFLICTS: Detecting and Addressing Conflicting Sources in Search-Augmented LLMs*. arXiv:2506.08500. https://arxiv.org/abs/2506.08500
